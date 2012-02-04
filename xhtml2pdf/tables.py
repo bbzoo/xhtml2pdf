@@ -181,7 +181,8 @@ class pisaTagTABLE(pisaTag):
         tdata.colw = []
         tdata.rowh = []
         tdata.repeat = attrs.repeat
-        tdata.width = _width(attrs.width)
+        # accept width from attrs and css
+        tdata.width = _width( attrs.width or c.frag.width )
 
         # self.tabdata.append(tdata)
 
